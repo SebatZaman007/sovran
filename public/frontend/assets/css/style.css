@@ -1,0 +1,1099 @@
+/*
+-------------------------------------------------
+  Theme Name: Sovran - Shopping Club HTML5 Responsive Template
+  Theme URL: sovran.com
+  Author: Zainiklab
+  Author URL: zainiklab.com
+  Creation Date:19-01-2022
+  Description:A default stylesheet for Sovran - Shopping Club HTML5 Responsive Template
+  Version: 1.00
+  Primary use: startup, company, agency portfolio, company portfolio, web agency template, startup portfolio,corporate, business, responsive, bootstrap, html5, clean, modern, creative, landing page, app landing etc.
+
+  ---------------------------------------------------
+  Developed By: Suraiya Aysha
+  Developer URL: http://ayshatech.com/
+
+  ---------------------------------------------------
+
+  --------------------------------------------------
+  Table of Contents
+  --------------------------------------------------
+  1. General CSS
+  2. Typography CSS
+  3. Button CSS
+  4. Navbar CSS
+  5.Scroll To Top Area
+  5.Preloader Area Start
+  6. Header Area
+  7. Video Area
+  8. Ecommerce with an Edge
+  9. About Area
+  10. Member and Merchants Area
+  11. sovran-network-area
+  12. Coming Soon Area
+  13. Mobile App Area
+  14. Join With Us Area
+  15. Special Features Area
+  16. Footer Area/Copyright
+  17. Responsive CSS
+
+------------------------------------------------ */
+
+
+/*-----------------------------------------------
+            1. General Style
+-------------------------------------------------*/
+
+/*Font Connect*/
+@font-face {
+    font-family: 'Adieu';
+    src: url('../vendor/fonts/adieu/Adieu-Light.woff2') format('woff2'),
+    url('../vendor/fonts/adieu/Adieu-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Gilroy';
+    src: url('../vendor/fonts/gilroy/Gilroy-Regular.woff2') format('woff2'),
+    url('../vendor/fonts/gilroy/Gilroy-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+/*Font Connect*/
+
+  * {
+      margin: 0;
+      padding: 0;
+      border: none;
+      outline: none;
+  }
+
+  body,
+  html {
+      height: 100%;
+      margin: 0;
+  }
+
+body {
+    background: #fff none repeat scroll;
+    font-size: 16px;
+    font-weight: normal;
+    font-family: 'Gilroy', sans-serif;
+    color: var(--text-color);
+    line-height: 160%;
+    letter-spacing: 0.05em;
+    overflow-x: hidden;
+
+}
+
+p{
+  color: var(--text-color);
+}
+
+a {
+  color: var(--text-color);
+}
+a:hover {
+    color: var(--purple-color) !important;
+}
+/* Theme All Transitions
+------------------------------- */
+a, #mainNav, .theme-button, #mainNav .navbar-nav .nav-item .nav-link {
+    transition: all .5s ease-in-out;
+}
+
+.slow-transition, .theme-button{
+    transition: all .7s ease-in-out;
+}
+
+  ul li {
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+  }
+
+  ul {
+      margin: 0;
+      padding: 0;
+  }
+
+  a,
+  a > * {
+      outline: none;
+      cursor: pointer;
+      text-decoration: none;
+  }
+
+  a:hover {
+      text-decoration: none;
+      color: var(--purple-color);
+  }
+
+  img::selection {
+    background: transparent;
+  }
+  .page-link:focus {
+    box-shadow: none;
+  }
+
+  /*----Form Control Reset CSS----*/
+
+.form-control {
+    background-color: var(--white-color);
+    height: 50px;
+    color: #777c87;
+}
+  .form-control:focus {
+      background-color: var(--white-color);
+      border-color: rgba(0,0,0,.125);
+      box-shadow: none;
+  }
+  .form-control::placeholder {
+      color: #a0a3aa;
+  }
+.btn-close:focus {
+    box-shadow: none;
+}
+
+/*------------------------------------------
+            2.  Typography
+-------------------------------------------*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Adieu', sans-serif;
+    font-weight: 300;
+    margin: 0;
+    color: var(--heading-color);
+}
+h1 {
+    font-size: 64px;
+    line-height: 98.5%;
+}
+h2 {
+    font-size: 56px;
+    line-height: 114.5%;
+}
+h3 {
+    font-size: 46px;
+    line-height: 114.5%;
+}
+h4{
+    font-size: 25px;
+    line-height: 114.5%;
+}
+
+p {
+    margin-bottom: 0;
+    font-size: 16px;
+    line-height: 160%;
+    color: var(--text-color);
+}
+figure {
+    margin: 0 0 0;
+}
+
+/*--------------------------------
+            2.1 Theme Color
+-----------------------------------*/
+:root{
+    --white-color: #fff;
+    --heading-color: #110437;
+    --text-color: #494949;
+    --purple-color: #7349F2;
+    --font-gilroy: 'Gilroy-Regular', sans-serif;
+    --font-adieu: 'Adieu', sans-serif;
+}
+
+.color-heading {
+    color: var(--heading-color);
+}
+.color-text {
+    color: var(--text-color);
+}
+.color-purple {
+    color: var(--purple-color);
+}
+
+/*--------------------------------
+    2.3 Theme padding, margin
+-----------------------------------*/
+section {
+    overflow-x: hidden;
+}
+section, .section-b-space {
+    padding-bottom: 120px;
+}
+.section-t-space {
+    padding-top: 120px;
+}
+.section-b-90-space {
+    padding-bottom: 90px;
+}
+.section-t-40-space {
+    padding-top: 40px;
+}
+.pb-15 {
+    padding-bottom: 15px;
+}
+.pb-30 {
+    padding-bottom: 30px;
+}
+.mb-15 {
+    margin-bottom: 15px;
+}
+.mb-30 {
+    margin-bottom: 30px;
+}
+.radius-4 {
+    border-radius: 4px;
+}
+/*--------------------------------
+    2.3 Theme Font Family, Font Size
+-----------------------------------*/
+.font-gilroy {
+    font-family: var(--font-gilroy);
+}
+.font-adieu {
+    font-family: var(--font-adieu);
+}
+.font-weight-normal{
+    font-weight: 400;
+}
+.font-semi-bold {
+    font-weight: 500;
+}
+.font-bold {
+     font-weight: 700;
+ }
+.font-18{
+    font-size: 18px;
+}
+.font-14{
+    font-size: 14px;
+}
+.font-13{
+    font-size: 13px;
+    line-height: 160%;
+}
+.font-24 {
+    font-size: 24px;
+    line-height: 114.5%;
+}
+
+/*--------------------------------
+   2.4 Template Default CSS
+-----------------------------------*/
+
+/*----Template Main Section ----*/
+section{
+    position: relative;
+    z-index: 9;
+}
+.section-overlay{
+    height: 100%;
+    width: 100%;
+}
+#mainNav .container-fluid, #home .container-fluid, #mobileNav .container-fluid{
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+/*--------------------------------
+   2.5 Default Image Overlay CSS
+-----------------------------------*/
+
+/*------------------------------------------
+            2.  Typography
+-------------------------------------------*/
+
+/*--------------------------------------------
+            3. Button Style
+---------------------------------------------*/
+.btn{
+  padding: 0;
+}
+.btn.focus, .btn:focus {
+    outline: 0;
+    box-shadow: none;
+}
+button{
+    background-color: transparent;
+}
+button:focus {
+    outline: 0;
+}
+.modal button.btn {
+    color: #fff;
+}
+.modal button.send-btn {
+    background-color: var(--purple-color);
+}
+
+/*-----Theme Button Style-----*/
+.theme-button {
+    color: #fff !important;
+    display: inline-block;
+    cursor: pointer;
+    transition: all 0.7s ease 0s;
+    outline: none;
+    text-transform: capitalize;
+    z-index: 99;
+    padding: 12px 30px 14px;
+    border-radius: 50px;
+}
+/*-------------------------------------------
+           4. Navbar Area CSS
+-------------------------------------------*/
+.menu-section-area {
+    padding: 0;
+    z-index: 999;
+}
+.menu-section-area #mainNav.navbar {
+    padding: 0;
+}
+#mainNav {
+    height: 108px;
+    background-color: var(--white-color);
+}
+#mainNav .navbar-brand {
+    position: relative;
+}
+#mainNav .navbar-nav .nav-item .nav-link, #mobileNav .navbar-nav .nav-item .nav-link, .menu-search button {
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 0.035em;
+    text-transform: uppercase;
+    font-family: 'Adieu', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    color: #23164C;
+    padding: 0.75em 0 0.1em 0;
+    margin: 0 14px;
+    border-bottom: 1px solid transparent;
+}
+#mainNav .navbar-nav .nav-item .nav-link:hover, #mainNav .navbar-nav .nav-item .nav-link.active {
+    border-bottom: 1px solid var(--purple-color);
+    color: var(--purple-color);
+}
+
+#mobileNav .navbar-nav .nav-item .nav-link:hover, #mobileNav .navbar-nav .nav-item .nav-link.active {
+    color: var(--purple-color);
+}
+.nav-item.menu-search button {
+    margin-left: 38px!important;
+    margin-right: 0!important;
+    border-bottom: none!important;
+}
+.nav-item.menu-search button:hover {
+    border-bottom: none!important;
+}
+.menu-search img {
+    margin-right: 7px;
+    position: relative;
+    top: -1px;
+}
+
+/*Desktop Search Form Start*/
+.desktop-search-form {
+    height: 100vh;
+    min-height: 300px;
+    border-bottom: none;
+}
+.desktop-search-form form {
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    margin-top: -50px;
+}
+.desktop-search-form .form-group {
+    border: 1px solid rgba(0, 0, 0, 0.16);
+    border-radius: 4px;
+    padding: 0 10px;
+    width: 397px;
+    margin: 0 auto;
+    display: flex;
+}
+.desktop-search-form .form-control {
+    border: transparent;
+}
+/*Desktop Search Form End*/
+
+/*Navbar Responsive*/
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(115, 73, 242, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+@media only screen and (max-width: 1230px) {
+    #mainNav {
+        display: none;
+    }
+    #mobileNav {
+        display: block!important;
+    }
+}
+#mobileNav .offcanvas {
+    border-left: none;
+}
+
+#mobileNav form {
+    border: 1px solid rgba(0, 0, 0, 0.16);
+    border-radius: 4px;
+    padding: 0 10px;
+    margin: 30px 14px 0;
+}
+
+/*-------------------------------------------
+            5. Preloader Area Start
+-------------------------------------------*/
+#preloader {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    background-color: #fff;
+    z-index: 99999999;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+#status {
+    width: 80px;
+    height: 88px;
+    background-image: url('../img/footer-logo.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin: 0 auto;
+}
+/*-------------------------------------------
+            5. Preloader Area End
+-------------------------------------------*/
+
+/*-------------------------------------------
+           6. Header Area
+-------------------------------------------*/
+.home-banner-area {
+    background: linear-gradient(180deg, rgba(115, 73, 242, 0) 0%, rgba(142, 8, 254, 0.19) 40.63%, rgba(12, 108, 242, 0.21) 64.58%, rgba(12, 108, 242, 0) 100%);
+    /* height: 933px; */
+    /* min-height: 600px; */
+    /* align-items: center; */
+    /* padding-top: 137px; */
+    /* display: flex; */
+    /* padding-bottom: 63px; */
+    /* border: 1px solid; */
+    /* background: red; */
+}
+.row.hero-area-wrapper {
+    /* height: 1025px; */
+    min-height: 800px;
+    display: flex;
+    align-items: center;
+}
+.hero-area-content h1 {
+    line-height: 120%;
+}
+.hero-area-content p {
+    margin: 26px 0 54px;
+    font-size: 24px;
+    font-family: 'Gilroy', sans-serif;
+    font-weight: normal;
+    line-height: 38px;
+    width: 79%;
+}
+.hero-button-box a.theme-button.btn {
+    margin-right: 23px;
+}
+.theme-button i {
+    padding-right: 8px;
+}
+.hero-button-box a > img {
+    border-radius: 5px;
+}
+.hero-button-box .theme-button {
+    line-height: 10px;
+    padding: 16px 30px 18px;
+}
+.hero-button-box .theme-button:last-child {
+    margin-left: 20px;
+}
+/*-------------------------------------------
+            6. Header Area End
+-------------------------------------------*/
+
+/*-------------------------------------------
+    7. Video Area Start
+-------------------------------------------*/
+.video-wrapper {
+    position: relative;
+    display: flex;
+}
+.video-wrapper .video-poster img {
+    width: 100%;
+}
+.video-area-right h1 {
+    margin-bottom: 50px;
+    line-height: 120%;
+}
+.video-poster-text {
+    font-family: var(--font-adieu);
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 130.5%;
+    bottom: 55px;
+    width: 65%;
+    left: 24px;
+}
+.vbox-close {
+    top: 7px;
+    right: 25px;
+    background-color: transparent!important;
+    font-size: 28px;
+}
+.play-button {
+    background-color: #fff;
+    height: 69px;
+    width: 69px;
+    position: absolute;
+    text-align: center;
+    border-radius: 50%;
+    bottom: 74px;
+    right: 74px;
+    line-height: 59px;
+    font-size: 23px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    animation: shadow-pulse 3s infinite;
+    z-index: 9;
+}
+/*Video Play Button Effect */
+@keyframes shadow-pulse
+{
+    0% {
+        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7);
+    }
+    100% {
+        box-shadow: 0 0 0 15px rgba(255, 255, 255, 0);
+    }
+}
+
+@keyframes shadow-pulse-big
+{
+    0% {
+        box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.5);
+    }
+    100% {
+        box-shadow: 0 0 0 30px rgba(255, 255, 255, 0);
+    }
+}
+/*Video Play Button Effect */
+
+.video-area-right {
+    margin-left: 35px;
+}
+.video-area .video-para-content {
+    line-height: 160%;
+    width: 62%;
+    margin-top: 10px;
+}
+/*-------------------------------------------
+    7. Video Area End
+-------------------------------------------*/
+
+/*-------------------------------------------
+    8. Ecommerce with an Edge Area Start
+-------------------------------------------*/
+.ecommerce-border-wrap {
+    border-top: 1px solid rgba(0, 0, 0, 0.16);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.16);
+}
+.ecommerce-edge-para p {
+    padding-left: 13px;
+    width: 92%;
+}
+.ecommerce-edge-title h3 {
+    font-size: 44px;
+}
+.ecommerce-edge-small-box p {
+    color: #7E7E7E;
+    margin-top: 13px;
+}
+/*-------------------------------------------
+    8. Ecommerce with an Edge Area End
+-------------------------------------------*/
+
+/*-------------------------------------------
+    9. About Area Start
+-------------------------------------------*/
+.about-content-box {
+    margin-top: 38px;
+    padding-right: 50px;
+}
+.about-content-box h4 {
+    margin-bottom: 14px;
+}
+.about-title .sub-title {
+    margin-bottom: 10px;
+}
+.what-do-we-do-box {
+    padding: 0;
+    margin-top: 100px;
+}
+/*-------------------------------------------
+   9. About Area End
+-------------------------------------------*/
+
+/*-------------------------------------------
+    10. Member and Merchants Area Start
+-------------------------------------------*/
+.members-merchants-area {
+    background-color: var(--purple-color);
+}
+.members-box-main .members-box-wrap:last-child .member-box-content {
+    margin-bottom: 0;
+}
+.members-box-wrap {
+    padding-right: 150px;
+    padding-left: 150px;
+}
+.member-box-content {
+    padding-right: 50px;
+    padding-left: 50px;
+    margin-top: 55px;
+    margin-bottom: 65px;
+}
+.members-img-gradient {
+    background: linear-gradient(180deg, rgba(31, 102, 242, 0) 0%, #7349F2 100%);
+    height: 159px;
+    bottom: 0;
+    width: 100%;
+}
+.member-box-content h1 {
+    margin-top: 16px;
+    margin-bottom: 32px;
+}
+.members-facility-list-item {
+    padding-bottom: 7px;
+}
+.members-merchants-area .members-facility-list-item, .members-merchants-area .members-facility-list-item .iconify {
+    color: var(--white-color);
+}
+/*-------------------------------------------
+    10. Member and Merchants Area End
+-------------------------------------------*/
+
+/*-------------------------------------------
+    11. sovran-network-area Area Start
+-------------------------------------------*/
+.sovran-netowrk-title {
+    margin-bottom: 50px;
+}
+.sovran-netowrk-title h1 {
+    margin-bottom: 30px;
+}
+.sovran-network-content-wrap {
+    padding-right: 53px;
+    padding-left: 53px;
+}
+.sovran-network-content-wrap .row:nth-child(even) {
+    flex-direction: row-reverse;
+}
+.network-list-wrap h4 {
+    margin-bottom: 20px;
+}
+.members-facility-list-item {
+    color: var(--text-color);
+}
+.members-facility-list-item .iconify {
+    color: var(--purple-color);
+    font-family: var(--font-gilroy);
+}
+/*-------------------------------------------
+    11. sovran-network-area Area End
+-------------------------------------------*/
+
+/*-------------------------------------------
+    12. Coming Soon Area Start
+-------------------------------------------*/
+.coming-soon-title p {
+    margin-bottom: 30px;
+}
+.coming-soon-title-left {
+    top: 270px;
+    left: -200px;
+}
+.coming-soon-title-right {
+    bottom: 140px;
+    right: -130px;
+}
+/*-------------------------------------------
+    12. Coming Soon Area End
+-------------------------------------------*/
+
+/*-------------------------------------------
+    13. Mobile App Area Start
+-------------------------------------------*/
+.mobile-app-area {
+    background: linear-gradient(180deg, #7349F2 0%, #2D61F2 27.08%, #7349F2 52.6%, #7349F2 77.08%, #2D61F2 100%);
+}
+.mobile-app-item h5 {
+    font-size: 20px;
+    line-height: 114.5%;
+}
+.mobile-app-item p {
+    margin-top: 9px;
+    margin-bottom: 57px;
+    padding-right: 154px;
+}
+/*-------------------------------------------
+    13. Mobile App Area End
+-------------------------------------------*/
+
+/*-------------------------------------------
+    14. Join With Us Area Start
+-------------------------------------------*/
+.join-with-us-title h1 {
+    margin-top: 11px;
+    margin-bottom: 22px;
+    line-height: 114.5%;
+}
+.join-with-us-title p {
+    line-height: 114.5%;
+    color: #595959;
+}
+/*-------------------------------------------
+    14. Join With Us Area End
+-------------------------------------------*/
+
+/*-------------------------------------------
+    15. Special Features Area Start
+-------------------------------------------*/
+.special-features-border-wrap {
+    border-top: 1px solid rgba(0, 0, 0, 0.14);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.14);
+}
+.special-features-item {
+    margin-bottom: 30px;
+}
+.special-features-item h5 {
+    margin-bottom: 5px;
+}
+/*-------------------------------------------
+    15. Special Features Area End
+-------------------------------------------*/
+
+/*-------------------------------------------
+    16. Footer Area Area
+-------------------------------------------*/
+.footer-area {
+    padding-top: 100px;
+    padding-bottom: 70px;
+}
+.footer-logo-img h6 {
+    margin-top: 22px;
+    margin-bottom: 8px;
+}
+.footer-social li a {
+    padding: 19px 15px 0;
+    font-size: 24px;
+}
+footer a:hover {
+    color: var(--purple-color);
+}
+/*-------------------------------------------
+    16. Footer Area Area End
+-------------------------------------------*/
+
+/*-------------------------------------------
+    20. Blog Page Style Start
+-------------------------------------------*/
+/*--------Breadcrumb Area CSS--------*/
+header.page-banner-area {
+    background: linear-gradient(180deg, rgba(115, 73, 242, 0) 0%, rgba(142, 8, 254, 0.19) 40.63%, rgba(12, 108, 242, 0.21) 64.58%, rgba(12, 108, 242, 0) 100%);
+    /*height: 400px;*/
+}
+.page-banner-area .row {
+    height: 300px;
+}
+header.page-banner-area .header-caption-heading {
+    padding: 19px 0 18px;
+}
+.breadcrumb{
+    background-color: transparent;
+    padding: 0;
+}
+.breadcrumb li.breadcrumb-item{
+    font-size: 18px;
+    align-items: center;
+}
+.breadcrumb-item.active, .breadcrumb li.breadcrumb-item a, .page-banner-area .header-caption > h1 {
+    /*color: var(--bg-dark);*/
+}
+.breadcrumb-item + .breadcrumb-item::before {
+    content: "";
+}
+.breadcrumb-item + .breadcrumb-item {
+    padding-left: 0;
+}
+.breadcrumb-item i {
+    padding-right: 11px;
+    padding-top: 3px;
+}
+/*--------Breadcrumb Area CSS--------*/
+
+.all-blog-posts-wrapper, .blog-details-page-wrapper {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.16);
+}
+
+/*Blog Thumb Pagination-----*/
+.pagination-area {
+    margin: 30px auto 0;
+}
+.pagination {
+    flex-wrap: wrap;
+}
+.pagination-area .page-link {
+    background-color: #fff;
+    border: 1px solid rgb(147 147 147 / 16%);
+    text-align: center;
+    color: var(--text-color);
+}
+.pagination-area li .page-link {
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    margin: 0 5px 5px!important;
+}
+.page-item.active .page-link {
+    background-color: var(--purple-color);
+    border-color: var(--purple-color);
+}
+.pagination-area li:first-child .page-link, .pagination-area li:last-child .page-link {
+    border-radius: 25px;
+    height: auto;
+    width: auto;
+    margin: 0;
+    background-color: #fff;
+    border: 1px solid rgb(147 147 147 / 16%);
+}
+/*Blog Item CSS Start*/
+.single-blog-post {
+    border: 1px solid rgb(147 147 147 / 16%);
+    margin-bottom: 30px;
+}
+.single-blog-post img {
+    width: 100%;
+}
+.single-blog-post h4 {
+    font-size: 21px;
+}
+.single-blog-content {
+    padding: 30px;
+}
+.single-blog-content p {
+    color: #919191;
+    font-size: 14px;
+}
+.single-blog-content p .iconify {
+    margin-right: 7px;
+    position: relative;
+    top: -1.7px;
+}
+/*Blog Item CSS End*/
+
+/*-------------------------------------------
+        20. Blog Page Style End
+-------------------------------------------*/
+
+/*-------------------------------------------
+    21. Blog Details Page Style Start
+-------------------------------------------*/
+.single-blog-banner-area{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+  /*Block 1 Style*/
+  #content .card-footer-box div {
+      margin-right: 37px;
+  }
+  #content .block-1 p {
+      margin-bottom: 20px;
+  }
+  #content .author-box img {
+      margin-right: 15px;
+      height: 36px;
+  }
+  #content .blog-date i{
+      margin-right: 6px;
+  }
+#content .card {
+    box-shadow: none;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+  #content .card a {
+    overflow: hidden;
+}
+#content .card-body {
+    padding: 20px 30px 30px;
+}
+#content .card-footer {
+    padding: .5rem 0 0;
+    background-color: transparent;
+    border-top: 1px solid rgba(0,0,0,.125);
+    margin-top: 1.7rem;
+}
+
+   /*----- Blog Content Media -------*/
+.blog-content-with-media {
+    display: flex;
+}
+  .blog-content-media {
+      margin: 0 0 35px;
+      padding-top: 15px;
+  }
+.blog-content-with-media h6 {
+    margin: 5% 0 2%;
+}
+.blog-media-box::before {
+    position: absolute;
+    content: "";
+    height: 220px;
+    width: 180px;
+    background-color: transparent;
+    left: 10%;
+    top: 24%;
+    border: 7px solid var(--purple-color);
+    z-index: -1;
+}
+#content blockquote {
+    padding: 22px 60px 22px 20px;
+    margin: 2% 0;
+}
+#content .block-1 blockquote p {
+    margin-bottom: 0;
+    border-left: 5px solid var(--purple-color);
+    padding-left: 14px;
+    font-style: italic;
+}
+#content .share-box {
+    text-transform: capitalize;
+}
+#content .share-article {
+    border-top: 1px solid rgba(0,0,0,.125);
+    border-bottom: 0;
+    padding: 40px 0 0;
+    margin-top: 30px;
+}
+  #content .share-box a {
+      color: #777c87;
+  }
+  /* ---- 22.3 Blog Aside Area ---- */
+  /*Widget Search*/
+.widget-search form .form-control {
+    width: calc(100% - 55px);
+    float: left;
+    background-color: var(--white-color);
+    border: 1px solid rgba(0,0,0,.125);
+}
+.widget-search .form-inline {
+    width: 100%;
+}
+.widget-search .form-inline > button {
+    width: 55px;
+    height: 50px;
+    background-color: var(--purple-color);
+}
+.widget-search .form-inline > button > .iconify {
+    color: var(--white-color);
+}
+  /*Widget Title*/
+  .widget h4.widget-title {
+      margin: 61px 0 43px;
+  }
+.widget h4.widget-title::after {
+    position: absolute;
+    height: 1px;
+    width: 50%;
+    content: "";
+    left: 0;
+    background-color: rgba(0,0,0,.125);
+    bottom: -9px;
+}
+.widget ul li a {
+    padding-bottom: 30px;
+}
+.widget ul li a img {
+    width: 100px;
+    height: auto;
+    min-height: 60px;
+}
+  /*Widget Categories*/
+.widget-categories ul li a {
+    display: block;
+    text-transform: capitalize;
+    border-bottom: 1px solid rgba(0,0,0,.125);
+    padding: 15px 0;
+}
+.widget-categories ul li a span.cat-number{
+    float: right;
+    position: relative;
+}
+  .widget-categories ul li a > i {
+      font-size: 12px;
+      padding-right: 9px;
+  }
+
+  /*Widget Recent Post*/
+  .widget-recent-posts ul li:first-child a {
+      padding-top: 0;
+  }
+  .widget-recent-posts ul li:last-child a {
+      padding-bottom: 0;
+  }
+.widget-recent-posts ul li a p {
+    line-height: 16px;
+    padding-left: 10px;
+    font-size: 14px;
+    /* color: #f8f8f9; */
+}
+.widget-categories ul li a .iconify {
+    margin-right: 5px;
+}
+.widget-recent-posts ul li a p > span {
+    display: block;
+    padding-top: 8px;
+    color: #949aa7;
+    font-size: 12px;
+}
+  /*Widget Popular Tags*/
+  .widget-popular-tags ul li {
+      display: inline-block;
+  }
+.widget-popular-tags ul li a {
+    background-color: var(--purple-color);
+    display: block;
+    float: left;
+    padding: 5px 9px;
+    margin: 1px;
+    font-size: 13px;
+    color: var(--white-color);
+    text-transform: capitalize;
+    border-radius: 25px;
+}
+/*-------------------------------------------
+    21. Blog Details Page Style End
+-------------------------------------------*/

@@ -1,0 +1,509 @@
+/*-------------------------------------------
+    17. Responsive Design CSS
+-------------------------------------------*/
+
+/*=====================================
+    Extra Large Screen
+========================================*/
+
+@media only screen and (min-width: 1920px) {
+}
+
+/*=====================================
+    For Large Screen
+========================================*/
+
+/*------Max 1200px Width Screen------*/
+
+@media only screen and (max-width: 1775px) {
+}
+
+/*--------Max 1680px Width Screen---------*/
+@media only screen and (max-width: 1680px) {
+    h1 {
+        font-size: 56px;
+    }
+    .hero-area-content h1 {
+        font-size: 56px;
+    }
+    h2 {
+        font-size: 48px;
+    }
+
+    /*Menu CSS*/
+    #mainNav .navbar-nav .nav-item .nav-link, .menu-search button {
+        font-size: 14px;
+        margin: 0 12px;
+    }
+    .nav-item.menu-search button {
+        margin-left: 15px!important;
+    }
+    .coming-soon-title-left {
+        left: -30px;
+    }
+    .coming-soon-title-right {
+        right: -30px;
+    }
+
+}
+
+@media only screen and (max-width: 1501px) {
+    #mainNav .navbar-nav .nav-item .nav-link, .menu-search button {
+        font-size: 13px;
+    }
+    .menu-search span {
+        display: none;
+    }
+    .menu-search img {
+        margin-right: 0;
+    }
+
+}
+
+@media only screen and (max-width: 1400px) {
+    .ecommerce-edge-title h3 {
+        font-size: 36px;
+    }
+    #mainNav .container-fluid, #home .container-fluid, #mobileNav .container-fluid {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+    .hero-area-content p {
+        width: 95%;
+    }
+    .video-poster-text {
+        font-size: 14px;
+    }
+    .play-button {
+        height: 60px;
+        width: 60px;
+    }
+    .coming-soon-title h1 {
+        font-size: 36px;
+    }
+    .mobile-app-item p {
+        padding-right: 30px;
+    }
+}
+
+
+@media only screen and (max-width: 1399px) {
+    .coming-soon-title-left {
+        left: 0;
+    }
+    .coming-soon-title-right {
+        right: 0;
+    }
+    .special-features-item img {
+        height: 30px;
+    }
+    .special-features-item .flex-grow-1 {
+        margin-left: .55rem!important;
+    }
+    .special-features-item h5 {
+        font-size: 17px;
+    }
+}
+
+/*--------Max 1366px Width Screen---------*/
+
+@media only screen and (max-width: 1366px) {
+
+    /*Default for Max 1366px Width Devices*/
+    body {
+        font-size: 14px;
+    }
+    .theme-button {
+        font-size: 16px;
+    }
+    /*Menu CSS*/
+    #mainNav .navbar-nav .nav-item .nav-link, .menu-search button {
+        font-size: 12px;
+        margin: 0 9px;
+    }
+    .menu-search img {
+        height: 16px;
+    }
+
+}
+
+/*--------Max 1200px Width Screen---------*/
+
+@media only screen and (max-width: 1242px) {
+    #mainNav .navbar-nav .nav-item .nav-link, .menu-search button {
+        margin: 0 7px;
+    }
+    .nav-item.menu-search button {
+        margin-left: 10px!important;
+    }
+}
+@media only screen and (max-width: 1200px) {
+    h1 {
+        font-size: 41px;
+    }
+    .hero-area-content h1 {
+        font-size: 41px;
+    }
+    h2 {
+        font-size: 38px;
+    }
+    h4 {
+        font-size: 20px;
+    }
+    .about-left-side > img {
+        height: 500px;
+    }
+    .about-content-box {
+        padding-right: 15px;
+    }
+    .what-do-we-do-box {
+        margin-top: 62px;
+        padding-right: 0;
+    }
+    .members-box-wrap {
+        padding-right: 100px;
+        padding-left: 100px;
+    }
+}
+
+/*=====================================
+    For Medium Screen
+========================================*/
+
+@media only screen and (max-width: 1199px) {
+    .hero-area-wrapper {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+    .hero-area-content p {
+        width: 67%;
+        margin: 26px auto 0;
+    }
+    .hero-right-bg img {
+        height: 400px;
+        margin-bottom: 30px;
+    }
+    .video-poster-text {
+        font-size: 12px;
+    }
+    .play-button {
+        height: 50px;
+        width: 50px;
+        bottom: 67px;
+        right: 30px;
+    }
+    .play-button > img {
+        height: 20px;
+    }
+    .about-left-side > img {
+        height: 450px;
+    }
+    .members-box-wrap {
+        padding-right: 0;
+        padding-left: 0;
+    }
+    .member-box-content {
+        padding-right: 0;
+        padding-left: 0;
+    }
+    .coming-soon-title h1 {
+        font-size: 28px;
+    }
+    .special-features-item {
+        flex-direction: column;
+    }
+    .special-features-item img {
+        height: auto;
+        margin-bottom: 20px;
+    }
+
+}
+
+@media only screen and (min-width: 992px){
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px){
+}
+
+/*======================================
+        Tablet layout
+=========================================*/
+
+@media only screen and (max-width: 992px) {
+}
+
+@media only screen and (min-width: 991px) {
+}
+
+@media only screen and (min-width: 768.98px) and (max-width: 991.98px) {
+    p {
+        font-size: 16px;
+    }
+    .coming-soon-title-left {
+        top: 190px;
+        left: -3px;
+    }
+    .coming-soon-title-right {
+        right: -3px;
+    }
+
+}
+
+@media only screen and (max-width: 991px){
+    .video-area .video-para-content {
+        width: 100%;
+    }
+    .video-area-right {
+        margin-left: 0;
+    }
+    .ecommerce-edge-para p {
+        padding-left: 0;
+        margin: 20px 0;
+    }
+    .about-left-side {
+        margin-bottom: 30px;
+    }
+    .mobile-app-title {
+        margin-bottom: 30px;
+    }
+    .coming-soon-title h1 {
+        font-size: 22px;
+    }
+    .what-do-we-do-box {
+        margin-top: 38px;
+    }
+    .coming-soon-product {
+        margin-top: 13px;
+    }
+
+    /*Blog page*/
+    .single-blog-post h4 {
+        font-size: 18px;
+    }
+    #sidebar {
+        margin-top: 30px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .hero-area-content p {
+        width: 95%;
+    }
+
+}
+
+/*=======================================
+        For Small Devices
+=========================================*/
+@media only screen and (max-width: 767px) {
+    h1 {
+        font-size: 34px;
+    }
+    .ecommerce-edge-title h3 {
+        font-size: 34px;
+    }
+    h2 {
+        font-size: 34px;
+    }
+    .mobile-app-item h5 {
+        font-size: 16px;
+    }
+    section, .section-b-space {
+        padding-bottom: 50px;
+    }
+    .section-t-space {
+        padding-top: 50px;
+    }
+    .section-b-90-space {
+        padding-bottom: 20px;
+    }
+    .footer-area {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    .member-box-content {
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    .video-wrapper {
+        margin-bottom: 30px;
+    }
+    .ecommerce-edge-para p {
+        margin: 20px 0 0;
+    }
+    .ecommerce-edge-small-box {
+        margin-top: 20px;
+    }
+    .footer-social ul {
+        justify-content: flex-start!important;
+        margin-top: 30px;
+    }
+    .footer-social ul li:first-child a {
+        padding-left: 0!important;
+    }
+    .join-with-us-img img {
+        height: 200px;
+    }
+    .mobile-app-item p {
+        padding-right: 132px;
+        margin-bottom: 40px;
+    }
+    .coming-soon-title-left {
+        left: -75px;
+        top: 153px;
+    }
+    .coming-soon-title-right {
+        right: -75px;
+        bottom: 60px;
+    }
+    .coming-soon-title p {
+        margin-bottom: 10px;
+    }
+    .coming-soon-product img {
+        height: 300px;
+    }
+    .coming-soon-product {
+        margin-top: 40px;
+    }
+    .mobile-app-title {
+        margin-bottom: 40px;
+    }
+    .mobile-app-title h6 {
+        margin-top: 15px!important;
+    }
+
+}
+
+/*========================================
+          For large mobile
+=========================================*/
+
+@media only screen and (max-width: 766px) {
+}
+@media only screen and (max-width: 730px) {
+    .coming-soon-title h1 {
+        font-size: 18px;
+    }
+    .coming-soon-title p {
+        font-size: 12px;
+        margin-bottom: 10px;
+    }
+    .coming-soon-title-left {
+        left: 30px;
+    }
+    .coming-soon-title-right {
+        right: 30px;
+    }
+    .coming-soon-product img {
+        height: 250px;
+    }
+}
+@media only screen and (min-width: 480px) and (max-width: 766px) {
+}
+
+@media only screen and (max-width:575px) {
+    h1 {
+        font-size: 38px;
+    }
+    .hero-area-content h1 {
+        font-size: 38px;
+    }
+    .row.hero-area-wrapper {
+        min-height: 500px;
+    }
+    .hero-right-bg img {
+        height: 300px;
+    }
+    .hero-area-content p {
+        margin: 26px 0 0;
+        font-size: 18px;
+        line-height: 31px;
+    }
+    .sovran-network-content-wrap {
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+    #mainNav .container-fluid, #home .container-fluid, #mobileNav .container-fluid {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .mobile-app-img img {
+        height: 350px;
+    }
+    .mobile-app-item img {
+        height: 32px;
+    }
+
+    /*Blog Page*/
+    .page-banner-area .row {
+        height: 200px;
+    }
+    #content .share-article {
+        flex-direction: column;
+    }
+    .author-social {
+        margin-top: 7px;
+    }
+}
+
+@media only screen and (max-width:535px) {
+    .coming-soon-title-left, .coming-soon-title-right {
+        position: relative!important;
+        text-align: center;
+    }
+    .coming-soon-product {
+        margin-top: 30px;
+    }
+    .coming-soon-title-left {
+        left: 0;
+        top: 0;
+        margin-top: 30px;
+    }
+    .coming-soon-title-right {
+        right: 0;
+        bottom: 0;
+        margin-top: 30px;
+    }
+}
+
+@media only screen and (max-width:490px) {
+    #content .card-footer-box div {
+        margin-right: 15px;
+    }
+    .author-box {
+        display: none;
+    }
+}
+
+/*=========================================
+        For very little mobile
+=========================================*/
+@media only screen and (min-width:300px) and (max-width:479px) {
+    /*Header Area*/
+    h1, h2 {
+        font-size: 31px;
+    }
+    .hero-area-content h1 {
+        font-size: 31px;
+    }
+    .theme-button {
+        font-size: 13px;
+    }
+    p {
+        font-size: 16px;
+    }
+    .hero-right-bg img {
+        height: 230px;
+    }
+    .mobile-app-item p {
+        padding-right: 70px;
+    }
+
+    /*Blog Page*/
+    #content blockquote {
+        padding: 5px 60px 10px 20px;
+    }
+
+}
+/*-------------------------------------------
+      17. Responsive Design End
+-------------------------------------------*/
