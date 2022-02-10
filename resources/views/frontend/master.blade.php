@@ -116,24 +116,21 @@
                 <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-6">
                     <!--Hero Area Wrapper-->
                     <div class="hero-area-content">
-                        <h1 class="color-heading">Sovran
-                            Shopping
-                            Club <br>
-                            Next Generation <br>
-                            ecommerce <br>
-                            services <button type="button" class="font-18" data-bs-toggle="modal"
+                        <h1 class="color-heading">{{$home->home_name1}}
+                             <br>
+                             {{$home->home_name2}} <br>
+                             {{$home->home_name3}} <br>
+                             {{$home->home_name4}} <button type="button" class="font-18" data-bs-toggle="modal"
                                 data-bs-target="#exampleModal"><span class="iconify"
                                     data-icon="bx:bx-edit"></span></button></h1>
-                        <p>We build relationships between members and Businesses
-                            using a private blockchain-based Digital Payment
-                            Platform and Iucrative rewards Program</p>
+                        <p>{{$home->home_description}}</p>
                     </div>
                     <!--Hero Area Wrapper-->
                 </div>
                 <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-6">
                     <div class="hero-right-wrapper">
                         <div class="hero-right-bg box">
-                            <img src="{{asset('frontend/assets/img/hero-img.png')}}" alt="img" class="img-fluid">
+                            <img src="{{asset(BlogImage().$home->home_image)}}" alt="img" class="img-fluid">
                         </div>
                         <span class="coordinates"></span>
                     </div>
@@ -181,13 +178,13 @@
                 <div class="col-md-6 col-lg-5 wow animate__animated animate__fadeInUp">
                     <div class="video-wrapper">
                         <div class="video-poster">
-                            <img src="{{asset('frontend/assets/img/video-poster.png')}}" alt="Video" class="img-fluid ">
+                            <img src="{{asset(BlogImage().$videoposter->videoposter_image)}}" alt="Video" class="img-fluid ">
                         </div>
                         <div class="video-poster-text text-uppercase position-absolute text-white">
-                            Learn how the Sovran Shopping Club will revolutionize the world of online marketplaces
+                            {{$videoposter->videoposter_description}}
                         </div>
                         <a class="venobox play-button" data-vbtype="video" data-autoplay="true"
-                            href="http://youtu.be/Xg81i-9cAPw">
+                                href="{{$videoposter->videoposter_videolink}}">
                             <img src="{{asset('frontend/assets/img/play-icon.png')}}" alt="Play">
                         </a>
                     </div>
@@ -195,13 +192,10 @@
 
                 <div class="col-md-6 col-lg-7 wow animate__animated animate__fadeInUp">
                     <div class="video-area-right">
-                        <h1 class="text-uppercase">Support
-                            Merchants,
-                            Earn Rewards!</h1>
-                        <p class="font-24 color-purple text-uppercase">Save for your Dreams!</p>
-                        <p class="video-para-content">The Sovran Shopping Club offers Members total privacy and a unique
-                            form of savings. Our Members access our Merchants’ products and services with an opportunity
-                            to participate in a lucrative Rewards Program.
+                        <h1 class="text-uppercase">{{$videoarea->videoarea_name}}
+                         </h1>
+                        <p class="font-24 color-purple text-uppercase">{{$videoarea->videoarea_description}}</p>
+                        <p class="video-para-content">{{$videoarea->videoarea_pera}}
                         </p>
                     </div>
                 </div>
@@ -218,8 +212,7 @@
                 <div class="row">
                     <div class="col-md-12 col-lg-4">
                         <div class="ecommerce-edge-title">
-                            <h3 class="text-uppercase">eCommrce
-                                with an Edge
+                            <h3 class="text-uppercase">{{$ecommrceedgelarge->ecommrceedgelarge_title}}
                                 <!-- Button trigger modal -->
                                 <button type="button" class="btn btn-primary" data-bs-toggle="modal"
                                     data-bs-target="#exampleModal1">
@@ -230,26 +223,21 @@
                     </div>
                     <div class="col-md-12 col-lg-4">
                         <div class="ecommerce-edge-para">
-                            <p>The Sovran Shopping Club is an exclusive digital marketplace for both Members and
-                                Merchants. Merchants offer discounts to club Members and Members support Merchants
-                                locally or online.
+                            <p>{{$ecommrceedgelarge->ecommrceedgelarge_pera}}
                             </p>
                         </div>
                     </div>
-                    <div class="col-md-6 col-lg-2">
-                        <div class="ecommerce-edge-small-box text-uppercase">
-                            <h5>Spend</h5>
-                            <p class="font-13 text-uppercase">Shop and Support Merchants and Save on valuable goods and
-                                services</p>
+                    @foreach ($ecommrceedgesmall as $ecommrceedgesmallItem)
+                        <div class="col-md-6 col-lg-2">
+                            <div class="ecommerce-edge-small-box text-uppercase">
+                                <h5>{{$ecommrceedgesmallItem->ecomrceedgesmall_name}}</h5>
+                                <p class="font-13 text-uppercase">
+                                    {{$ecommrceedgesmallItem->ecomrceedgesmall_pera}}</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-md-6 col-lg-2">
-                        <div class="ecommerce-edge-small-box text-uppercase">
-                            <h5>Send</h5>
-                            <p class="font-13 text-uppercase">Securely Hold and privately Transfer or Send your digital
-                                wealth</p>
-                        </div>
-                    </div>
+                    @endforeach
+
+
                 </div>
             </div>
         </div>
@@ -283,7 +271,7 @@
                 <div class="col-12 col-md-12 col-lg-5 wow animate__animated animate__fadeInUp">
                     <!--About Left Side Start-->
                     <div class="about-left-side text-left position-relative">
-                        <img src="{{asset('frontend/assets/img/about-img.png')}}" alt="img" class="img-fluid">
+                        <img src="{{asset(BlogImage().$about->about_image)}}" alt="img" class="img-fluid">
                     </div>
                     <!--About Left Side End-->
                 </div>
@@ -291,9 +279,9 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="about-title">
-                                <p class="sub-title color-purple text-uppercase font-adieu">Why join Sovran Shopping
-                                    Club?</p>
-                                <h2 class="text-uppercase">Private <br> Club</h2>
+                                <p class="sub-title color-purple text-uppercase font-adieu">{{$about->about_header}}
+                                    </p>
+                                <h2 class="text-uppercase">{{$about->about_name1}} <br> {{$about->about_name2}}</h2>
                             </div>
                         </div>
                     </div>
@@ -313,11 +301,8 @@
                         </div>
                         <div class="col-md-12 col-lg-5">
                             <div class="about-content-box what-do-we-do-box">
-                                <h4 class="text-uppercase">What do we do?</h4>
-                                <p>Sovran realized that the world was heading toward a digital blockchain-based economy
-                                    and launched a one-of-a-kind private ‘peer to peer’ payment system for its Members.
-                                    Members can shop, hold digital coins in private and secure eWallets, and
-                                    instantaneously transfer money anywhere between Members. </p>
+                                <h4 class="text-uppercase">{{$about->about_whatdowedo}}</h4>
+                                <p>{{$about->about_whatdowedo_pera}} </p>
                             </div>
                         </div>
                     </div>

@@ -1,4 +1,3 @@
-
 @extends('admin.master')
 
 @section('content')
@@ -13,19 +12,20 @@
             </div>
             <!-- /.card-header -->
             <!-- form start -->
-            <form action="{{route('mainlogo.update')}}" method="POST" enctype="multipart/form-data">
+            <form action="{{route('videoposter.store')}}" method="POST" enctype="multipart/form-data">
               @csrf
               <div class="card-body">
                   <div class="mb-3">
-                      <input type="hidden" name="id" value="{{$edit->id}}">
-                      <label for="formFileMultiple" class="form-label">Mainlogo Image</label>
-                      <input class="form-control" type="file" name="mainlogo_image" id="formFileMultiple" multiple>
-                      <img src="{{asset(BlogImage().$edit->mainlogo_image)}}" width="70px" height="70px" alt="img">
-
+                      <label for="formFileMultiple" class="form-label">Videoposter Image</label>
+                      <input class="form-control" type="file" name="videoposter_image" id="formFileMultiple" multiple>
                     </div>
                 <div class="form-group">
-                  <label for="exampleInputEmail1">Mainlogo Name</label>
-                  <input type="text" name="mainlogo_name" value="{{$edit->mainlogo_name}}" class="form-control" id="exampleInputEmail1">
+                  <label for="exampleInputEmail1">Videoposter Description</label>
+                  <input type="text" name="videoposter_description" class="form-control" id="exampleInputEmail1">
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Videoposter Videolink</label>
+                  <input type="text" name="videoposter_videolink" class="form-control" id="exampleInputEmail1">
                 </div>
               </div>
               <!-- /.card-body -->

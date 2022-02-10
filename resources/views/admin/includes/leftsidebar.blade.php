@@ -40,15 +40,39 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="./index2.html" class="nav-link">
+                <a href="{{route('home.index')}}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Dashboard v2</p>
+                  <p>Home Page</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="./index3.html" class="nav-link">
+                <a href="{{route('videoposter.index')}}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Dashboard v3</p>
+                  <p>Video Poster</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="{{route('videoarea.index')}}" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Video Area</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="{{route('ecommrceedgelarge.index')}}" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Ecommrce Area</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="{{route('ecommrceedgesmall.index')}}" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Ecommrce Area Small</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="{{route('about.index')}}" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>About</p>
                 </a>
               </li>
             </ul>
