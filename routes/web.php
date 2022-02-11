@@ -1,14 +1,21 @@
 <?php
 
+use App\Http\Controllers\Admin\AboutcontentController;
 use App\Http\Controllers\Admin\AboutController;
 use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Admin\EcommrceedgelargeController;
 use App\Http\Controllers\Admin\EcommrceedgesmallController;
 use App\Http\Controllers\Admin\HomeController;
 use App\Http\Controllers\Admin\MainlogoController;
+use App\Http\Controllers\Admin\MarchentController;
+use App\Http\Controllers\Admin\MemberController;
+use App\Http\Controllers\Admin\MemberfaciliyController;
+use App\Http\Controllers\Admin\NetworkController;
+use App\Http\Controllers\Admin\NetworklistController;
 use App\Http\Controllers\Admin\VideoarearightController;
 use App\Http\Controllers\Admin\VideoposterController;
 use App\Http\Controllers\Frontend\ViewController;
+use App\Models\About;
 use Illuminate\Support\Facades\Route;
 
 //for dashboard
@@ -105,6 +112,80 @@ Route::group(['prefix' => 'admin'], function() {
 
  //
 
+ //for aboutcontent
+
+
+ Route::group(['prefix' => 'admin'], function() {
+    Route::get('aboutcontent-index',[AboutcontentController::class,'aboutcontentIndex'])->name('aboutcontent.index');
+    Route::get('aboutcontent-create',[AboutcontentController::class,'aboutcontentCreate'])->name('aboutcontent.create');
+    Route::post('aboutcontent-store',[AboutcontentController::class,'aboutcontentStore'])->name('aboutcontent.store');
+    Route::get('aboutcontent-edit/{id}',[AboutcontentController::class,'aboutcontentEdit'])->name('aboutcontent.edit');
+    Route::post('aboutcontent-update',[AboutcontentController::class,'aboutcontentUpdate'])->name('aboutcontent.update');
+    Route::get('aboutcontent-delete/{id}',[AboutcontentController::class,'aboutcontentDelete'])->name('aboutcontent.delete');
+ });
+
+ //
+
+ //for-member
+
+ Route::group(['prefix' => 'admin'], function() {
+    Route::get('member-index',[MemberController::class,'memberIndex'])->name('member.index');
+    Route::get('member-create',[MemberController::class,'memberCreate'])->name('member.create');
+    Route::post('member-store',[MemberController::class,'memberStore'])->name('member.store');
+    Route::get('member-edit/{id}',[MemberController::class,'memberEdit'])->name('member.edit');
+    Route::post('member-update',[MemberController::class,'memberUpdate'])->name('member.update');
+    Route::get('member-delete/{id}',[MemberController::class,'memberDelete'])->name('member.delete');
+ });
+
+ //
+
+ //for-marchent
+
+ Route::group(['prefix' => 'admin'], function() {
+    Route::get('marchent-index',[MarchentController::class,'marchentIndex'])->name('marchent.index');
+    Route::get('marchent-create',[MarchentController::class,'marchentCreate'])->name('marchent.create');
+    Route::post('marchent-store',[MarchentController::class,'marchentStore'])->name('marchent.store');
+    Route::get('marchent-edit/{id}',[MarchentController::class,'marchentEdit'])->name('marchent.edit');
+    Route::post('marchent-update',[MarchentController::class,'marchentUpdate'])->name('marchent.update');
+    Route::get('marchent-delete/{id}',[MarchentController::class,'marchentDelete'])->name('marchent.delete');
+ });
+//
+
+//for mamberfacility table
+
+Route::group(['prefix' => 'admin'], function() {
+    Route::get('memberfacility-index',[MemberfaciliyController::class,'memberfacilityIndex'])->name('memberfacility.index');
+    Route::get('memberfacility-create',[MemberfaciliyController::class,'memberfacilityCreate'])->name('memberfacility.create');
+    Route::post('memberfacility-store',[MemberfaciliyController::class,'memberfacilityStore'])->name('memberfacility.store');
+    Route::get('memberfacility-edit/{id}',[MemberfaciliyController::class,'memberfacilityEdit'])->name('memberfacility.edit');
+    Route::post('memberfacility-update',[MemberfaciliyController::class,'memberfacilityUpdate'])->name('memberfacility.update');
+    Route::get('memberfacility-delete/{id}',[MemberfaciliyController::class,'memberfacilityDelete'])->name('memberfacility.delete');
+ });
+
+ //
+
+ //for-network
+
+ Route::group(['prefix' => 'admin'], function() {
+    Route::get('network-index',[NetworkController::class,'networkIndex'])->name('network.index');
+    Route::get('network-create',[NetworkController::class,'networkCreate'])->name('network.create');
+    Route::post('network-store',[NetworkController::class,'networkStore'])->name('network.store');
+    Route::get('network-edit/{id}',[NetworkController::class,'networkEdit'])->name('network.edit');
+    Route::post('network-update',[NetworkController::class,'networkyUpdate'])->name('network.update');
+    Route::get('network-delete/{id}',[NetworkController::class,'networkDelete'])->name('network.delete');
+ });
+//
+
+//for-neworklist
+
+Route::group(['prefix' => 'admin'], function() {
+    Route::get('networklist-index',[NetworklistController::class,'networklistIndex'])->name('networklist.index');
+    Route::get('networklist-create',[NetworklistController::class,'networklistCreate'])->name('networklist.create');
+    Route::post('networklist-store',[NetworklistController::class,'networklistStore'])->name('networklist.store');
+    Route::get('networklist-edit/{id}',[NetworklistController::class,'networklistEdit'])->name('networklist.edit');
+    Route::post('networklist-update',[NetworklistController::class,'networklistyUpdate'])->name('networklist.update');
+    Route::get('networklist-delete/{id}',[NetworklistController::class,'networklistDelete'])->name('networklist.delete');
+ });
 
 
 

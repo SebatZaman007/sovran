@@ -2,7 +2,7 @@
 
 namespace Database\Seeders;
 
-
+use CreateMemberfacilitylistsTable;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -23,9 +23,12 @@ class DatabaseSeeder extends Seeder
         $this->call(EcommrceedgelargeTableSeeder::class);
         $this->call(EcommrceedgesmallTableSeeder::class);
         $this->call(AboutTableSeeder::class);
-
-
-
+        $this->call(AboutcontentTableSeeder::class);
+        $this->call(MemberTableSeeder::class);
+        $this->call(MarchentTableSeeder::class);
+        $this->call(MemberfasilityTableSeeder::class);
+        $this->call(NetworkTableSeeder::class);
+        $this->call(NetworklistTableSeeder::class);
 
     }
 }

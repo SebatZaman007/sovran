@@ -75,6 +75,43 @@
                   <p>About</p>
                 </a>
               </li>
+              <li class="nav-item">
+                <a href="{{route('aboutcontent.index')}}" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>About Content</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="{{route('member.index')}}" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Member</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="{{route('marchent.index')}}" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Marchent
+                  </p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="{{route('memberfacility.index')}}" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Memberfacility</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="{{route('network.index')}}" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Network</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="{{route('networklist.index')}}" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Network List</p>
+                </a>
+              </li>
             </ul>
           </li>
 

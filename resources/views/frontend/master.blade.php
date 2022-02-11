@@ -287,17 +287,14 @@
                     </div>
                     <div class="row">
                         <div class="col-md-12 col-lg-7">
+                            @foreach ($aboutcontent as $aboutcontentitem)
                             <div class="about-content-box">
-                                <h4 class="text-uppercase">Why do we do it?</h4>
-                                <p>The Sovran Shopping Club’s goal is to help Merchants in communities around the world.
-                                    Communities have lost 60% of small businesses. We will help Merchants while earning
-                                    residual income for the supporting Members!</p>
+                                <h4 class="text-uppercase">{{$aboutcontentitem->aboutcontent_name}}</h4>
+                                <p>{{$aboutcontentitem->aboutcontent_pera}}</p>
                             </div>
-                            <div class="about-content-box">
-                                <h4 class="text-uppercase">Who are we?</h4>
-                                <p>The Sovran Shopping Club, along with the Sovran Network, developed a private digital
-                                    payment system for the marketplace.</p>
-                            </div>
+                            @endforeach
+
+
                         </div>
                         <div class="col-md-12 col-lg-5">
                             <div class="about-content-box what-do-we-do-box">
@@ -319,43 +316,29 @@
                 <div class="col-12 members-box-main">
                     <div class="members-box-wrap">
                         <div class="members-box-img position-relative wow animate__animated animate__zoomIn">
-                            <img src="{{asset('frontend/assets/img/members-1.jpg')}}" alt="member" class="img-fluid">
+                            <img src="{{asset(BlogImage().$member->member_image)}}" alt="member" class="img-fluid">
                             <div class="members-img-gradient position-absolute"></div>
                         </div>
                         <div class="member-box-content wow animate__animated animate__fadeInUp">
-                            <h6 class="text-white font-18 font-adieu text-uppercase text-decoration-underline">Club
-                                advantages</h6>
-                            <h1 class="text-white text-uppercase">Shopping Club <br> Members</h1>
+                            <h6 class="text-white font-18 font-adieu text-uppercase text-decoration-underline">
+                               {{$member->member_header}}</h6>
+                            <h1 class="text-white text-uppercase">{{$member->member_title1}} <br> {{$member->member_title2}}</h1>
 
                             <div class="members-facility-list row text-white">
+                                @foreach ($memberfasility as $memberfasilityitem)
+                                @if ($loop->iteration<=8)
                                 <div class="col-md-6">
                                     <div class="members-facility-list-item d-flex align-items-center">
                                         <div class="flex-shrink-0">
                                             <span class="iconify" data-icon="bi:check-circle-fill"></span>
                                         </div>
-                                        <div class="flex-grow-1 ms-3">Provides savings and discounts for all members
+                                        <div class="flex-grow-1 ms-3">{{$memberfasilityitem->memberfasilitylist}}
                                         </div>
-                                    </div>
-                                    <div class="members-facility-list-item d-flex align-items-center">
-                                        <div class="flex-shrink-0">
-                                            <span class="iconify" data-icon="bi:check-circle-fill"></span>
-                                        </div>
-                                        <div class="flex-grow-1 ms-3">Mobile eWallet / digital bank account</div>
-                                    </div>
-                                    <div class="members-facility-list-item d-flex align-items-center">
-                                        <div class="flex-shrink-0">
-                                            <span class="iconify" data-icon="bi:check-circle-fill"></span>
-                                        </div>
-                                        <div class="flex-grow-1 ms-3">Shopping Club Debit card</div>
-                                    </div>
-                                    <div class="members-facility-list-item d-flex align-items-center">
-                                        <div class="flex-shrink-0">
-                                            <span class="iconify" data-icon="bi:check-circle-fill"></span>
-                                        </div>
-                                        <div class="flex-grow-1 ms-3">Great service from Merchants</div>
                                     </div>
                                 </div>
-                                <div class="col-md-6">
+                                @endif
+                                @endforeach
+                                {{-- <div class="col-md-6">
                                     <div class="members-facility-list-item d-flex align-items-center">
                                         <div class="flex-shrink-0">
                                             <span class="iconify" data-icon="bi:check-circle-fill"></span>
@@ -381,7 +364,7 @@
                                         </div>
                                         <div class="flex-grow-1 ms-3">True Financial Freedom</div>
                                     </div>
-                                </div>
+                                </div> --}}
                             </div>
 
                         </div>
@@ -389,43 +372,30 @@
                     </div>
                     <div class="members-box-wrap">
                         <div class="members-box-img position-relative wow animate__animated animate__zoomIn">
-                            <img src="{{asset('frontend/assets/img/members-2.jpg')}}" alt="member" class="img-fluid">
+                            <img src="{{asset(BlogImage().$marchent->marchent_image)}}" alt="member" class="img-fluid">
                             <div class="members-img-gradient position-absolute"></div>
                         </div>
                         <div class="member-box-content wow animate__animated animate__fadeInUp">
-                            <h6 class="text-white font-18 font-adieu text-uppercase text-decoration-underline">Club
-                                advantages</h6>
-                            <h1 class="text-white text-uppercase">Shopping Club <br> Merchants</h1>
+                            <h6 class="text-white font-18 font-adieu text-uppercase text-decoration-underline">{{$marchent->marchent_header}}
+                                </h6>
+                            <h1 class="text-white text-uppercase">{{$marchent->marchent_title1}} <br> {{$marchent->marchent_title2}}</h1>
 
                             <div class="members-facility-list row text-white">
+                                @foreach ($memberfasility as $memberfasilityitem)
+                                @if ($loop->iteration<=8)
                                 <div class="col-md-6">
                                     <div class="members-facility-list-item d-flex align-items-center">
                                         <div class="flex-shrink-0">
                                             <span class="iconify" data-icon="bi:check-circle-fill"></span>
                                         </div>
-                                        <div class="flex-grow-1 ms-3">Provides savings and discounts for all members
+                                        <div class="flex-grow-1 ms-3">{{$memberfasilityitem->memberfasilitylist}}
                                         </div>
-                                    </div>
-                                    <div class="members-facility-list-item d-flex align-items-center">
-                                        <div class="flex-shrink-0">
-                                            <span class="iconify" data-icon="bi:check-circle-fill"></span>
-                                        </div>
-                                        <div class="flex-grow-1 ms-3">Mobile eWallet / digital bank account</div>
-                                    </div>
-                                    <div class="members-facility-list-item d-flex align-items-center">
-                                        <div class="flex-shrink-0">
-                                            <span class="iconify" data-icon="bi:check-circle-fill"></span>
-                                        </div>
-                                        <div class="flex-grow-1 ms-3">Shopping Club Debit card</div>
-                                    </div>
-                                    <div class="members-facility-list-item d-flex align-items-center">
-                                        <div class="flex-shrink-0">
-                                            <span class="iconify" data-icon="bi:check-circle-fill"></span>
-                                        </div>
-                                        <div class="flex-grow-1 ms-3">Great service from Merchants</div>
                                     </div>
                                 </div>
-                                <div class="col-md-6">
+                                @endif
+
+                                @endforeach
+                                {{-- <div class="col-md-6">
                                     <div class="members-facility-list-item d-flex align-items-center">
                                         <div class="flex-shrink-0">
                                             <span class="iconify" data-icon="bi:check-circle-fill"></span>
@@ -451,7 +421,7 @@
                                         </div>
                                         <div class="flex-grow-1 ms-3">True Financial Freedom</div>
                                     </div>
-                                </div>
+                                </div> --}}
                             </div>
 
                         </div>
@@ -479,37 +449,22 @@
             <div class="sovran-network-content-wrap">
                 <div class="row align-items-center">
                     <div class="col-md-6 col-lg-7  wow animate__animated animate__fadeInUp">
-                        <img src="{{asset('frontend/assets/img/network-1.png')}}" alt="network" class="img-fluid">
+                        <img src="{{asset(BlogImage().$network->network_image)}}" alt="network" class="img-fluid">
                     </div>
                     <div class="col-md-6 col-lg-5 wow animate__animated animate__fadeInRight">
                         <div class="network-list-wrap">
-                            <h4 class="text-uppercase">The Sovran Network</h4>
+                            <h4 class="text-uppercase">{{$network->network_header}}</h4>
 
                             <div class="network-lists">
+                                @foreach ($networklist as $networklistitem)
                                 <div class="members-facility-list-item d-flex align-items-center">
                                     <div class="flex-shrink-0">
                                         <span class="iconify" data-icon="bi:check-circle-fill"></span>
                                     </div>
-                                    <div class="flex-grow-1 ms-3">Provides savings and discounts for all members</div>
+                                    <div class="flex-grow-1 ms-3">{{$networklistitem->networklist}}</div>
                                 </div>
-                                <div class="members-facility-list-item d-flex align-items-center">
-                                    <div class="flex-shrink-0">
-                                        <span class="iconify" data-icon="bi:check-circle-fill"></span>
-                                    </div>
-                                    <div class="flex-grow-1 ms-3">Mobile eWallet / digital bank account</div>
-                                </div>
-                                <div class="members-facility-list-item d-flex align-items-center">
-                                    <div class="flex-shrink-0">
-                                        <span class="iconify" data-icon="bi:check-circle-fill"></span>
-                                    </div>
-                                    <div class="flex-grow-1 ms-3">Shopping Club Debit card</div>
-                                </div>
-                                <div class="members-facility-list-item d-flex align-items-center">
-                                    <div class="flex-shrink-0">
-                                        <span class="iconify" data-icon="bi:check-circle-fill"></span>
-                                    </div>
-                                    <div class="flex-grow-1 ms-3">Great service from Merchants</div>
-                                </div>
+                                @endforeach
+
                             </div>
 
                         </div>

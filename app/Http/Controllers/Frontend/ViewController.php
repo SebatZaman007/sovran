@@ -4,10 +4,16 @@ namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
 use App\Models\About;
+use App\Models\Aboutcontent;
 use App\Models\Ecommrceedgelarge;
 use App\Models\Ecommrceedgesmall;
 use App\Models\Home;
 use App\Models\Mainlogo;
+use App\Models\Marchent;
+use App\Models\Member;
+use App\Models\Memberfacilitylist;
+use App\Models\Network;
+use App\Models\Networklist;
 use App\Models\Videoarearight;
 use App\Models\Videoposter;
 use Illuminate\Http\Request;
@@ -22,6 +28,12 @@ class ViewController extends Controller
         $ecommrceedgelarge=Ecommrceedgelarge::latest()->first();
         $ecommrceedgesmall=Ecommrceedgesmall::latest()->get();
         $about=About::latest()->first();
-        return view('frontend.master',compact('mainlogo','home','videoposter','videoarea','ecommrceedgelarge','ecommrceedgesmall','about'));
+        $aboutcontent=Aboutcontent::latest()->get();
+        $member=Member::latest()->first();
+        $marchent=Marchent::latest()->first();
+        $memberfasility=Memberfacilitylist::latest()->get();
+        $networklist=Networklist::latest()->get();
+        $network=Network::latest()->first();
+        return view('frontend.master',compact('mainlogo','home','videoposter','videoarea','ecommrceedgelarge','ecommrceedgesmall','about','aboutcontent','member','marchent','memberfasility','network','networklist'));
     }
 }
