@@ -29,6 +29,12 @@ class DatabaseSeeder extends Seeder
         $this->call(MemberfasilityTableSeeder::class);
         $this->call(NetworkTableSeeder::class);
         $this->call(NetworklistTableSeeder::class);
+        $this->call(ShoppingcoinTableSeeder::class);
+        $this->call(ShoppingcoinlistTableSeeder::class);
+        $this->call(PrivacyTableSeeder::class);
+        $this->call(PrivacylistTableSeeder::class);
+        $this->call(ComingsoonTableSeeder::class);
+        $this->call(JoinusTableSeeder::class);
 
     }
 }

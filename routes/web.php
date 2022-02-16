@@ -3,15 +3,21 @@
 use App\Http\Controllers\Admin\AboutcontentController;
 use App\Http\Controllers\Admin\AboutController;
 use App\Http\Controllers\Admin\AdminController;
+use App\Http\Controllers\Admin\ComingsoonController;
 use App\Http\Controllers\Admin\EcommrceedgelargeController;
 use App\Http\Controllers\Admin\EcommrceedgesmallController;
 use App\Http\Controllers\Admin\HomeController;
+use App\Http\Controllers\Admin\JoinusController;
 use App\Http\Controllers\Admin\MainlogoController;
 use App\Http\Controllers\Admin\MarchentController;
 use App\Http\Controllers\Admin\MemberController;
 use App\Http\Controllers\Admin\MemberfaciliyController;
 use App\Http\Controllers\Admin\NetworkController;
 use App\Http\Controllers\Admin\NetworklistController;
+use App\Http\Controllers\Admin\PrivacyController;
+use App\Http\Controllers\Admin\PrivacylistController;
+use App\Http\Controllers\Admin\ShoppingcoinController;
+use App\Http\Controllers\Admin\ShoppingcoinlistController;
 use App\Http\Controllers\Admin\VideoarearightController;
 use App\Http\Controllers\Admin\VideoposterController;
 use App\Http\Controllers\Frontend\ViewController;
@@ -187,8 +193,80 @@ Route::group(['prefix' => 'admin'], function() {
     Route::get('networklist-delete/{id}',[NetworklistController::class,'networklistDelete'])->name('networklist.delete');
  });
 
+ //
+
+ //for shoppingcontroller
+
+ Route::group(['prefix' => 'admin'], function() {
+    Route::get('shoppingcoin-index',[ShoppingcoinController::class,'shoppingcoinIndex'])->name('shoppingcoin.index');
+    Route::get('shoppingcoin-create',[ShoppingcoinController::class,'shoppingcoinCreate'])->name('shoppingcoin.create');
+    Route::post('shoppingcoin-store',[ShoppingcoinController::class,'shoppingcoinStore'])->name('shoppingcoin.store');
+    Route::get('shoppingcoin-edit/{id}',[ShoppingcoinController::class,'shoppingcoinEdit'])->name('shoppingcoin.edit');
+    Route::post('shoppingcoin-update',[ShoppingcoinController::class,'shoppingcoinUpdate'])->name('shoppingcoin.update');
+    Route::get('shoppingcoin-delete/{id}',[ShoppingcoinController::class,'shoppingcoinDelete'])->name('shoppingcoin.delete');
+ });
+ //
+
+ //for shoppingcoinlist
+ Route::group(['prefix' => 'admin'], function() {
+    Route::get('shoppingcoinlist-index',[ShoppingcoinlistController::class,'shoppingcoinlistIndex'])->name('shoppingcoinlist.index');
+    Route::get('shoppingcoinlist-create',[ShoppingcoinlistController::class,'shoppingcoinlistCreate'])->name('shoppingcoinlist.create');
+    Route::post('shoppingcoinlist-store',[ShoppingcoinlistController::class,'shoppingcoinlistStore'])->name('shoppingcoinlist.store');
+    Route::get('shoppingcoinlist-edit/{id}',[ShoppingcoinlistController::class,'shoppingcoinlistEdit'])->name('shoppingcoinlist.edit');
+    Route::post('shoppingcoinlist-update',[ShoppingcoinlistController::class,'shoppingcoinlistUpdate'])->name('shoppingcoinlist.update');
+    Route::get('shoppingcoinlist-delete/{id}',[ShoppingcoinlistController::class,'shoppingcoinlistDelete'])->name('shoppingcoinlist.delete');
+ });
+//
+
+//for privacy
+Route::group(['prefix' => 'admin'], function() {
+    Route::get('privacy-index',[PrivacyController::class,'privacyIndex'])->name('privacy.index');
+    Route::get('privacy-create',[PrivacyController::class,'privacyCreate'])->name('privacy.create');
+    Route::post('privacy-store',[PrivacyController::class,'privacyStore'])->name('privacy.store');
+    Route::get('privacy-edit/{id}',[PrivacyController::class,'privacyEdit'])->name('privacy.edit');
+    Route::post('privacy-update',[PrivacyController::class,'privacyUpdate'])->name('privacy.update');
+    Route::get('privacy-delete/{id}',[PrivacyController::class,'privacyDelete'])->name('privacy.delete');
+ });
+
+ //
+
+ //For privacylist
+ Route::group(['prefix' => 'admin'], function() {
+    Route::get('privacylist-index',[PrivacylistController::class,'privacylistIndex'])->name('privacylist.index');
+    Route::get('privacylist-create',[PrivacylistController::class,'privacylistCreate'])->name('privacylist.create');
+    Route::post('privacylist-store',[PrivacylistController::class,'privacylistStore'])->name('privacylist.store');
+    Route::get('privacylist-edit/{id}',[PrivacylistController::class,'privacylistEdit'])->name('privacylist.edit');
+    Route::post('privacylist-update',[PrivacylistController::class,'privacylistUpdate'])->name('privacylist.update');
+    Route::get('privacylist-delete/{id}',[PrivacylistController::class,'privacylistDelete'])->name('privacylist.delete');
+ });
+//
+
+//for comingsoon
+
+Route::group(['prefix' => 'admin'], function() {
+    Route::get('comingsoon-index',[ComingsoonController::class,'comingsoonIndex'])->name('comingsoon.index');
+    Route::get('comingsoon-create',[ComingsoonController::class,'comingsoonCreate'])->name('comingsoon.create');
+    Route::post('comingsoon-store',[ComingsoonController::class,'comingsoonStore'])->name('comingsoon.store');
+    Route::get('comingsoon-edit/{id}',[ComingsoonController::class,'comingsoonEdit'])->name('comingsoon.edit');
+    Route::post('comingsoon-update',[ComingsoonController::class,'comingsoonUpdate'])->name('comingsoon.update');
+    Route::get('comingsoon-delete/{id}',[ComingsoonController::class,'comingsoonDelete'])->name('comingsoon.delete');
+ });
+
+ //
+
+ //for joinus
+
+ Route::group(['prefix' => 'admin'], function() {
+    Route::get('joinus-index',[JoinusController::class,'joinusIndex'])->name('joinus.index');
+    Route::get('joinus-create',[JoinusController::class,'joinusCreate'])->name('joinus.create');
+    Route::post('joinus-store',[JoinusController::class,'joinusStore'])->name('joinus.store');
+    Route::get('joinus-edit/{id}',[JoinusController::class,'joinusEdit'])->name('joinus.edit');
+    Route::post('joinus-update',[JoinusController::class,'joinusUpdate'])->name('joinus.update');
+    Route::get('joinus-delete/{id}',[JoinusController::class,'joinusDelete'])->name('joinus.delete');
+ });
+//
 
 
-//FOR-forntend
+ //frontend
 
 Route::get('/',[ViewController::class,'view'])->name('view');

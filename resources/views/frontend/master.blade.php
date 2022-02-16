@@ -472,37 +472,21 @@
                 </div>
                 <div class="row align-items-center">
                     <div class="col-md-6 col-lg-7 wow animate__animated animate__fadeInUp">
-                        <img src="{{asset('frontend/assets/img/network-2.png')}}" alt="network" class="img-fluid">
+                        <img src="{{asset(BlogImage().$shoppingcoin->shoppingcoin_image)}}" alt="network" class="img-fluid">
                     </div>
                     <div class="col-md-6 col-lg-5 wow animate__animated animate__fadeInLeft">
                         <div class="network-list-wrap">
-                            <h4 class="text-uppercase">Sovran Shopping Coins</h4>
+                            <h4 class="text-uppercase">{{$shoppingcoin->shoppingcoin_header}}</h4>
 
                             <div class="network-lists">
+                                @foreach ($shoppingcoinlist as $shoppingcoinlistitem)
                                 <div class="members-facility-list-item d-flex align-items-center">
                                     <div class="flex-shrink-0">
                                         <span class="iconify" data-icon="bi:check-circle-fill"></span>
                                     </div>
-                                    <div class="flex-grow-1 ms-3">Provides savings and discounts for all members</div>
+                                    <div class="flex-grow-1 ms-3">{{$shoppingcoinlistitem->shoppingcoinlist}}</div>
                                 </div>
-                                <div class="members-facility-list-item d-flex align-items-center">
-                                    <div class="flex-shrink-0">
-                                        <span class="iconify" data-icon="bi:check-circle-fill"></span>
-                                    </div>
-                                    <div class="flex-grow-1 ms-3">Mobile eWallet / digital bank account</div>
-                                </div>
-                                <div class="members-facility-list-item d-flex align-items-center">
-                                    <div class="flex-shrink-0">
-                                        <span class="iconify" data-icon="bi:check-circle-fill"></span>
-                                    </div>
-                                    <div class="flex-grow-1 ms-3">Shopping Club Debit card</div>
-                                </div>
-                                <div class="members-facility-list-item d-flex align-items-center">
-                                    <div class="flex-shrink-0">
-                                        <span class="iconify" data-icon="bi:check-circle-fill"></span>
-                                    </div>
-                                    <div class="flex-grow-1 ms-3">Great service from Merchants</div>
-                                </div>
+                                @endforeach
                             </div>
 
                         </div>
@@ -510,39 +494,22 @@
                 </div>
                 <div class="row align-items-center">
                     <div class="col-md-6 col-lg-7 wow animate__animated animate__fadeInUp">
-                        <img src="{{asset('frontend/assets/img/network-3.png')}}" alt="network" class="img-fluid">
+                        <img src="{{asset(BlogImage().$privacy->privacy_image)}}" alt="network" class="img-fluid">
                     </div>
                     <div class="col-md-6 col-lg-5 wow animate__animated animate__fadeInRight">
                         <div class="network-list-wrap">
-                            <h4 class="text-uppercase">Privacy and Encryption</h4>
+                            <h4 class="text-uppercase">{{$privacy->privacy_header}}</h4>
 
                             <div class="network-lists">
+                                @foreach ($privacylist as $privacylistitem)
                                 <div class="members-facility-list-item d-flex align-items-center">
                                     <div class="flex-shrink-0">
                                         <span class="iconify" data-icon="bi:check-circle-fill"></span>
                                     </div>
-                                    <div class="flex-grow-1 ms-3">Provides savings and discounts for all members</div>
+                                    <div class="flex-grow-1 ms-3">{{$privacylistitem->privacylist}}</div>
                                 </div>
-                                <div class="members-facility-list-item d-flex align-items-center">
-                                    <div class="flex-shrink-0">
-                                        <span class="iconify" data-icon="bi:check-circle-fill"></span>
-                                    </div>
-                                    <div class="flex-grow-1 ms-3">Mobile eWallet / digital bank account</div>
-                                </div>
-                                <div class="members-facility-list-item d-flex align-items-center">
-                                    <div class="flex-shrink-0">
-                                        <span class="iconify" data-icon="bi:check-circle-fill"></span>
-                                    </div>
-                                    <div class="flex-grow-1 ms-3">Shopping Club Debit card</div>
-                                </div>
-                                <div class="members-facility-list-item d-flex align-items-center">
-                                    <div class="flex-shrink-0">
-                                        <span class="iconify" data-icon="bi:check-circle-fill"></span>
-                                    </div>
-                                    <div class="flex-grow-1 ms-3">Great service from Merchants</div>
-                                </div>
+                                @endforeach
                             </div>
-
                         </div>
                     </div>
                 </div>
@@ -560,19 +527,19 @@
                     <div
                         class="coming-soon-title coming-soon-title-left position-absolute wow animate__animated animate__fadeInLeft">
                         <p class="color-purple text-uppercase font-adieu font-18">Coming soon</p>
-                        <h1 class="text-uppercase">Member <br> & Merchant </h1>
+                        <h1 class="text-uppercase">{{$comingsoon->comingsoon_title_one}} <br>{{$comingsoon->comingsoon_title_two}} </h1>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-8 wow animate__animated animate__zoomIn">
                     <div class="coming-soon-product text-center box">
-                        <img src="{{asset('frontend/assets/img/coming-soon-product.png')}}" alt="product" class="img-fluid">
+                        <img src="{{asset(BlogImage().$comingsoon->comingsoon_image)}}" alt="product" class="img-fluid">
                     </div>
                     <span class="coordinates"></span>
                 </div>
                 <div class="col-md-3 col-lg-2">
                     <div
                         class="coming-soon-title coming-soon-title-right position-absolute wow animate__animated animate__fadeInRight">
-                        <h1 class="text-uppercase">Promotions</h1>
+                        <h1 class="text-uppercase">{{$comingsoon->comingsoon_title_three}}</h1>
                     </div>
                 </div>
             </div>

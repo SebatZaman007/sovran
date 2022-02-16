@@ -112,6 +112,42 @@
                   <p>Network List</p>
                 </a>
               </li>
+              <li class="nav-item">
+                <a href="{{route('shoppingcoin.index')}}" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Shoppingcoin</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="{{route('shoppingcoinlist.index')}}" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Shoppingcoin List</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="{{route('privacy.index')}}" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Privacy</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="{{route('privacylist.index')}}" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Privacy List</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="{{route('comingsoon.index')}}" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Comingsoon</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="{{route('joinus.index')}}" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Join Us</p>
+                </a>
+              </li>
             </ul>
           </li>
 
