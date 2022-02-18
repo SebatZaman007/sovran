@@ -8,7 +8,11 @@ use App\Models\Aboutcontent;
 use App\Models\Comingsoon;
 use App\Models\Ecommrceedgelarge;
 use App\Models\Ecommrceedgesmall;
+use App\Models\Features;
+use App\Models\Footerleft;
+use App\Models\Footerlink;
 use App\Models\Home;
+use App\Models\Joinus;
 use App\Models\Mainlogo;
 use App\Models\Marchent;
 use App\Models\Member;
@@ -44,6 +48,11 @@ class ViewController extends Controller
         $privacy=Privacy::latest()->first();
         $privacylist=Privacylist::latest()->get();
         $comingsoon=Comingsoon::latest()->first();
-        return view('frontend.master',compact('mainlogo','home','videoposter','videoarea','ecommrceedgelarge','ecommrceedgesmall','about','aboutcontent','member','marchent','memberfasility','network','networklist','shoppingcoin','shoppingcoinlist','privacy','privacylist','comingsoon'));
+        $joinus=Joinus::latest()->first();
+        $features=Features::latest()->get();
+        $footerleft=Footerleft::latest()->first();
+        $footerlink=Footerlink::latest()->get();
+        
+        return view('frontend.pages.index.index',compact('mainlogo','home','videoposter','videoarea','ecommrceedgelarge','ecommrceedgesmall','about','aboutcontent','member','marchent','memberfasility','network','networklist','shoppingcoin','shoppingcoinlist','privacy','privacylist','comingsoon','joinus','features','footerleft','footerlink'));
     }
 }

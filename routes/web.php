@@ -2,10 +2,14 @@
 
 use App\Http\Controllers\Admin\AboutcontentController;
 use App\Http\Controllers\Admin\AboutController;
+use App\Http\Controllers\Admin\AdminBlogController;
 use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Admin\ComingsoonController;
 use App\Http\Controllers\Admin\EcommrceedgelargeController;
 use App\Http\Controllers\Admin\EcommrceedgesmallController;
+use App\Http\Controllers\Admin\FeaturesController;
+use App\Http\Controllers\Admin\FooterleftController;
+use App\Http\Controllers\Admin\FooterlinkController;
 use App\Http\Controllers\Admin\HomeController;
 use App\Http\Controllers\Admin\JoinusController;
 use App\Http\Controllers\Admin\MainlogoController;
@@ -20,6 +24,7 @@ use App\Http\Controllers\Admin\ShoppingcoinController;
 use App\Http\Controllers\Admin\ShoppingcoinlistController;
 use App\Http\Controllers\Admin\VideoarearightController;
 use App\Http\Controllers\Admin\VideoposterController;
+use App\Http\Controllers\Frontend\BlogController;
 use App\Http\Controllers\Frontend\ViewController;
 use App\Models\About;
 use Illuminate\Support\Facades\Route;
@@ -266,7 +271,70 @@ Route::group(['prefix' => 'admin'], function() {
  });
 //
 
+//for features
+
+Route::group(['prefix' => 'admin'], function() {
+    Route::get('features-index',[FeaturesController::class,'featuresIndex'])->name('features.index');
+    Route::get('features-create',[FeaturesController::class,'featuresCreate'])->name('features.create');
+    Route::post('features-store',[FeaturesController::class,'featuresStore'])->name('features.store');
+    Route::get('features-edit/{id}',[FeaturesController::class,'featuresEdit'])->name('features.edit');
+    Route::post('features-update',[FeaturesController::class,'featuresUpdate'])->name('features.update');
+    Route::get('features-delete/{id}',[FeaturesController::class,'featuresDelete'])->name('features.delete');
+ });
+
+ //
+//for footerleft
+
+Route::group(['prefix' => 'admin'], function() {
+    Route::get('footerleft-index',[FooterleftController::class,'footerleftIndex'])->name('footerleft.index');
+    Route::get('footerleft-create',[FooterleftController::class,'footerleftCreate'])->name('footerleft.create');
+    Route::post('footerleft-store',[FooterleftController::class,'footerleftStore'])->name('footerleft.store');
+    Route::get('footerleft-edit/{id}',[FooterleftController::class,'footerleftEdit'])->name('footerleft.edit');
+    Route::post('footerleft-update',[FooterleftController::class,'footerleftUpdate'])->name('footerleft.update');
+    Route::get('footerleft-delete/{id}',[FooterleftController::class,'footerleftDelete'])->name('footerleft.delete');
+ });
+
+ //
+ //forfooterlink
+ Route::group(['prefix' => 'admin'], function() {
+    Route::get('footerlink-index',[FooterlinkController::class,'footerlinkIndex'])->name('footerlink.index');
+    Route::get('footerlink-create',[FooterlinkController::class,'footerlinkCreate'])->name('footerlink.create');
+    Route::post('footerlink-store',[FooterlinkController::class,'footerlinkStore'])->name('footerlink.store');
+    Route::get('footerlink-edit/{id}',[FooterlinkController::class,'footerlinkEdit'])->name('footerlink.edit');
+    Route::post('footerlink-update',[FooterlinkController::class,'footerlinkUpdate'])->name('footerlink.update');
+    Route::get('footerlink-delete/{id}',[FooterlinkController::class,'footerlinkDelete'])->name('footerlink.delete');
+ });
+//
+
+//for blog
+
+Route::group(['prefix' => 'admin'], function() {
+    Route::get('blog-index',[AdminBlogController::class,'adminblogIndex'])->name('adminblog.index');
+    Route::get('blog-create',[AdminBlogController::class,'adminblogCreate'])->name('adminblog.create');
+    Route::post('blog-store',[AdminBlogController::class,'adminblogStore'])->name('adminblog.store');
+    Route::get('blog-edit/{id}',[AdminBlogController::class,'adminblogEdit'])->name('adminblog.edit');
+    Route::post('blog-update',[AdminBlogController::class,'adminblogUpdate'])->name('adminblog.update');
+    Route::get('blog-delete/{id}',[AdminBlogController::class,'adminblogDelete'])->name('adminblog.delete');
+ });
+
+//
+
+
+
+
 
  //frontend
 
+
+ //for indexpage
 Route::get('/',[ViewController::class,'view'])->name('view');
+
+//
+
+//for blog
+
+Route::group(['prefix' => 'blog'], function() {
+    Route::get('blog-view',[BlogController::class,'blogView'])->name('blog.view');
+ });
+
+

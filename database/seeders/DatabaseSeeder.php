@@ -35,6 +35,10 @@ class DatabaseSeeder extends Seeder
         $this->call(PrivacylistTableSeeder::class);
         $this->call(ComingsoonTableSeeder::class);
         $this->call(JoinusTableSeeder::class);
+        $this->call(FeaturesTableSeeder::class);
+        $this->call(FooterleftTableSeeder::class);
+        $this->call(FooterlinkTableSeeder::class);
+        $this->call(BlogTableSeeder::class);
 
     }
 }
